@@ -1,25 +1,88 @@
 .nav {
-    display: none;
     position: absolute;
     left: 0; top: 0;
-    min-width: 100vh; height: 100vh;
+    min-width: 100vw; height: 100vh;
     background-color: $white;
     @include _992 {
         display: block;
         position: relative;
+        min-width: 0; height: auto;
     }
     &.active {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
     }
     &-list {
         display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include _992 {
+            flex-direction: row;
+        }
+        &._column {
+            flex-direction: column;
+        }
     }
     &-menu {
-
+        display: flex;
+        margin: 0 25px 0 0;
+        flex-direction: column;
+        @include _992 {
+            flex-direction: row;
+        }
         &-link {
+            text-align: center;
+            position: relative;
             display: inline-block;
             width: 100%;
+            font-weight: 500;
             color: $black;
+            border-radius: 15px;
+            padding: 15px 20px;
+            margin: 0 5px;
+            transition: all .2s ease-in-out;
+            & span {
+                position: relative;
+                z-index: 2;
+            }
+            @include _992 {
+                &::before {
+                    content: '';
+                    background: $gradientAccent;
+                    position: absolute;
+                    left: 0; top: 0;
+                    border-radius: 15px;
+                    opacity: 0;
+                    transform: scale(1.1);
+                    width: 100%; height: 100%;
+                    transition: all .2s ease-in-out;
+                }
+                &:hover {
+                    color: $white;
+                    box-shadow: $shadowAccent;
+                    &::before {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+    &-contacts {
+        &-tel {
+            display: inline-block;
+            color: $black;
+            font-weight: 700;
+            @include adaptiv-font(18, 18);
+            padding: 3px 0;
+            border-bottom: 2px solid $black;
+            margin: 3px 0;
         }
     }
     
@@ -34,6 +97,9 @@
     border-radius: 5px;
     box-shadow: $shadowAccent;
     z-index: 100;
+    @include _992 {
+        display: none;
+    }
     & span {
         position: absolute;
         left: 0;

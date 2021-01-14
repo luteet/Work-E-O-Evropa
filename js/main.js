@@ -8,5 +8,20 @@ $(function() {
         body.toggleClass('lock');
     });
 
+    function mediaEvents(e) {
+        if(e < 992) {
+            $(nav).fadeOut(200)
+        }
+        else {
+            $(nav).fadeIn(200)
+        }
+    }
+    mediaEvents($(window).width());
+    $(window).resize(function() {
+        mediaEvents($(this).width());
+        
+    })
+
+
 });
 
