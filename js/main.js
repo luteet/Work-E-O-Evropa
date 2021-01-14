@@ -4,17 +4,20 @@ $(function() {
 
     burger.on('click', function() {
         navAndBurger.toggleClass('active');
-        nav.fadeToggle(200);
         body.toggleClass('lock');
     });
 
+
+    
     function mediaEvents(e) {
-        if(e < 992) {
-            $(nav).fadeOut(200)
+
+        if(e > 992) {
+            nav.css('transition', 'all 0s ease-in-out')
         }
-        else {
-            $(nav).fadeIn(200)
+        else if(e < 992) {
+            nav.css('transition', 'all 0.2s ease-in-out')
         }
+
     }
     mediaEvents($(window).width());
     $(window).resize(function() {
