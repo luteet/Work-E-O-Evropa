@@ -1,0 +1,31 @@
+/* @font-face {
+    font-family: "font";
+    font-display: swap;
+    src: url(../css/font.woff);
+} */
+
+body {
+    font-family: "Roboto";
+    @include adaptiv-font(16, 16);
+    
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container, .min-container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: $maxWidth+px;
+}
+
+.min-container {
+    max-width: $maxWidthMin+px;
+}
+
+
+

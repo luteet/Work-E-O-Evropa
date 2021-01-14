@@ -1,0 +1,29 @@
+@import 'vars.scss';
+@import 'mixin.scss';
+@import 'null.scss';
+@import 'libs.scss';
+@import 'global.scss';
+@import 'text.scss';
+@import 'nav.scss';
+
+.header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: auto;
+    box-shadow: $shadowAccent;
+    padding: 5px 0;
+    z-index: 100;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        flex: 0 1 15%;
+        max-width: 120px;
+        border-radius: 50%;
+        
+    }
+}
+
+
