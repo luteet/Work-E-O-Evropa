@@ -1,0 +1,48 @@
+.form {
+    width: 100%;
+    margin: 35px auto 0 auto;
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+    }
+    & label {
+        margin: 5px;
+        flex: 0 1 100%;
+        &.large-label {
+            flex: 1 1 100%;
+        }
+        @media(min-width: 550px) {
+            flex: 0 1 48%;
+        }
+    }
+    &-field {
+        resize: none;
+        display: inline-block;
+        border-radius: 15px;
+        width: 100%;
+        padding: 20px 20px;
+        transition: all .2s ease-in-out;
+        background: $gradientAccentGray;
+        &:focus {
+            background-color: $white;
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+        &:focus::placeholder {
+            opacity: 0;
+        }
+        &::placeholder {
+            color: $black;
+        }
+    }
+    &-message {
+        min-height: 500px;
+    }
+    &-btn {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+}

@@ -21,22 +21,76 @@
         font-size: 21px;
     }
 }
+
+._decor-title {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%; bottom: 0;
+        transform: translate(-50%, 50%);
+        width: 40px; height: 10px;
+        border-radius: 15px;
+        background: $gradientAccent;
+    }
+    @include _992 {
+        &::before {
+            width: 60px; height: 15px;
+        }
+        &-min::before {
+            width: 25px; height: 5px;
+        }
+    }
+}
+
+._decor-title-min {
+    position: relative;
+    text-align: center;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%; bottom: 0;
+        transform: translate(-50%, 50%);
+        border-radius: 15px;
+        background: $gradientAccent;
+        width: 25px; height: 5px;
+    }
+}
+
 .section-title {
-    @include adaptiv-font(48, 12);
+    
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    @include adaptiv-font(48, 18);
     font-weight: 700;
     @include _992 {
         font-size: 48px;
+        padding-bottom: 30px;
     }
     
 }
 .min-title {
-    @include adaptiv-font(28, 12);
+    @include adaptiv-font(24, 16);
     font-weight: 700;
+    &._decor-title-min {
+        padding: 0 0 10px 0;
+        margin: 0 0 15px 0;
+    }
     @include _992 {
-        font-size: 28px;
+        font-size: 24px;
     }
 }
 
 ._light-color {
     color: $white;
 }
+
+.vacancies-paragraph {
+    text-transform: uppercase;
+    font-weight: 700;
+    &::after {
+        content: ':';
+    }
+}
+

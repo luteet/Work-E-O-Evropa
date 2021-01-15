@@ -24,6 +24,12 @@
     }
 }
 
+@mixin _maxWidth {
+    @media (min-width: $maxWidth+px) {
+        @content;
+    }
+}
+
 $maxWidth: 1630;
 $maxWidthMin: 1310;
 $maxWidthMinText: 769;
@@ -42,6 +48,15 @@ $maxWidthMinText: 769;
 @mixin adaptiv-p($minPValue, $maxPValue) {
     padding: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
 }
+
+@mixin adaptiv-ptb($minPValue, $maxPValue) {
+    @media(max-width: $maxWidth+px) {
+        padding: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320) / 5) 0;
+    }
+    padding: $maxPValue+px 0;
+    
+}
+
 @mixin adaptiv-m($minPValue, $maxPValue) {
     margin: calc(#{$minPValue + px} + (#{$maxPValue} + #{$minPValue}) * ((100vw - 320px)) / (#{$maxWidth} - 320))
 }
