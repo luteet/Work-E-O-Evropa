@@ -2,7 +2,7 @@ $(function() {
 
     var burger = $('.burger'), nav = $('.header__nav'), navAndBurger = $('.burger, .header__nav'), body = $('body'),
     
-    header = $('.header');
+    header = $('.header'), HtmlBody = $('html, body');
 
     burger.on('click', function() {
         navAndBurger.toggleClass('active');
@@ -26,6 +26,14 @@ $(function() {
         mediaEvents($(this).width());
         
     })
+
+
+    $('.btn-to-top').on('click', function() {
+        HtmlBody.animate({
+            scrollTop: 0
+        }, 1000);
+    })
+
 
     $('.last-vacancies__slider').slick({
         slidesToShow: 3,
