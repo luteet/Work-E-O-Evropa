@@ -44,4 +44,9 @@
     color: $white;
     display: flex;
     align-items: center;
+    background-color: $black;
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
 }
