@@ -187,6 +187,34 @@ $(function() {
         classAnchorForTop: true
     });
 
+    $('.filter-block__list label').on('click', function() {
+        $('.filter-match').removeClass('hide').addClass('active').css('left', $(this).offset().left + $(this).width() + 'px').css('top', $(this).offset().top + $(this).height() + 'px')
+    });
+
+
+
+    body.on('click', function(e) {
+        if($('.filter-block__list').has(e.target).length == 0) {
+            console.log(e.target)
+            $('.filter-match').removeClass('active').addClass('hide');
+        }
+    })
+
+
+    $('.list-vacancies__filter-btn-toggle').on('click', function() {
+        $('.filter').addClass('active');
+        body.on('click', function(e) {
+            console.log($('.list-vacancies__filter-btn-toggle').has(e.target).length)
+            if($('.filter').has(e.target).length == 0 && !$(e.target).hasClass('list-vacancies__filter-btn-toggle')) {
+                $('.filter').removeClass('active');
+            }
+        })
+        
+    });
+
+    $('.filter-close-btn').on('click', function() {
+        $('.filter').removeClass('active');
+    });
 
 
 });

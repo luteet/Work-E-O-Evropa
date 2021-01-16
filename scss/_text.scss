@@ -33,6 +33,9 @@
         border-radius: 15px;
         background: $gradientAccent;
     }
+    &._decor-title-left::before {
+        left: 0%; bottom: 0;
+    }
     @include _992 {
         &::before {
             width: 60px; height: 15px;
@@ -55,10 +58,26 @@
         background: $gradientAccent;
         width: 25px; height: 5px;
     }
+    &._decor-title-left {
+        @include _992 {
+            text-align: left;
+            &::before {
+                left: 0%; bottom: 0;
+                transform: translate(0%, 50%);
+            }
+        }
+        text-align: center;
+        &::before {
+            left: 50%; bottom: 0;
+            transform: translate(-50%, 50%);
+        }
+        
+    }
+
 }
 
 .section-title {
-    
+    line-height: 105%;
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 50px;
@@ -76,6 +95,7 @@
     &._decor-title-min {
         padding: 0 0 10px 0;
         margin: 0 0 15px 0;
+        
     }
     @include _992 {
         font-size: 24px;

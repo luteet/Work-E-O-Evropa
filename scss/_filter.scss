@@ -1,0 +1,173 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+    position: absolute;
+    left: 0; top: 0%;
+    min-width: 100%;
+    background-color: $white;
+    z-index: 10;
+    transition: all .2s ease-in-out;
+    box-shadow: $shadowAccent;
+    border-radius: 25px;
+    @media(min-width: 1100px) {
+        display: block;
+        position: static;
+        padding: 20px 0px;
+        min-height: 0;
+        box-shadow: none;
+        transform: translateX(0%);
+    }
+    @media(min-width: 400px) {
+        min-width: 200px;
+    }
+    transform: translateX(-100%);
+    &.active {
+        transform: translateX(0%);
+        & .filter-close-btn {
+            opacity: 1;
+        }
+    }
+    &-title {
+        position: relative;
+    }
+    &-close-btn {
+        position: absolute;
+        right: 0; top: 0;
+        transform: translate(0%, -100%);
+        background: $gradientAccent;
+        width: 35px; height: 35px;
+        padding: 0;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all .2s ease-in-out;
+        @media(min-width: 400px) {
+            right: -15px; top: 0;
+            transform: translate(150%, -100%);
+        }
+        &::before, &::after {
+            content: '';
+
+            position: absolute;
+            right: 0; top: calc(50% - 1px);
+
+            width: 100%; height: 3px;
+            background-color: $white;
+
+            z-index: 2;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &-match {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        z-index: 10;
+        font-size: 14px;
+        border-radius: 15px;
+        white-space: nowrap;
+        box-shadow: $shadowAccent;
+        padding: 10px;
+        transform: translateY(-150%);
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+        opacity: 0; visibility: hidden;
+        z-index: 15;
+        &.hide {
+            opacity: 0; visibility: hidden;
+        }
+        &.active {
+            opacity: 1; visibility: visible;
+        }
+        &-value {
+            font-weight: 700;
+        }
+        &-submit {
+            color: blue;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @media(min-width: 500px) {
+            display: block;
+        }
+    }
+    &-btn {
+        width: 100%;
+        text-align: center;
+    }
+    &-block {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        margin: 5px 0;
+        
+        &__name {
+            color: $white;
+            @include adaptiv-font(18, 18);
+            font-weight: 700;
+            margin: -1px 0 15px 0;
+            text-align: center;
+            padding: 15px;
+            border-radius: 15px;
+            
+            background: $gradientAccent;
+            @include _992 {
+                font-size: 21px;
+            }
+        }
+        &__list {
+            padding: 5px 0px 15px 0;
+            & label {
+                font-weight: 500;
+                display: flex;
+                padding-left: 15px;
+                padding: 0 15px 0 15px;
+                cursor: pointer;
+                margin: 15px 0;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+.check-box {
+    display: inline-block;
+    margin-right: 7px;
+    cursor: pointer;
+    
+    &:checked + .check-style::after {
+        opacity: 1;
+    }
+}
+.check-style {
+    
+    position: absolute;
+    border-radius: 5px;
+    width: 20px; height: 20px;
+    margin: 0 0 0 -5px ;
+    background: $gradientAccent;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 4px; top: 4px;
+        width: 12px; height: 12px;
+        border-radius: 2px;
+        background-color: $white;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 35%; height: 35%;
+        background: $gradientAccent;
+        z-index: 2;
+        border-radius: 2px;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+    }
+}

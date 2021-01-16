@@ -7,6 +7,7 @@
 @import 'nav.scss';
 @import 'form.scss';
 
+
 .header {
     display: flex;
     align-items: center;
@@ -337,6 +338,7 @@
             @include _992 {
                 margin: 0 15px;
             }
+            
         }
         & .slick-arrow {
             position: absolute;
@@ -564,3 +566,8 @@
         }
     }
 }
+
+@import 'vacancies.scss';
+@import 'listVacancies.scss';
+@import 'filter.scss';
+@import 'vacansyPage.scss';

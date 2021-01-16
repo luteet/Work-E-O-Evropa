@@ -1,0 +1,168 @@
+.list-vacancies {
+    margin: 50px 0 75px 0;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__title {
+        flex: 1 1 100%;
+    }
+    
+    &__filter {
+        flex: 0 1 20%;
+        @include _maxWidth {
+            flex: 0 1 15%;
+        }
+        &-btn-toggle {
+            display: block;
+            display: inline-block;
+            margin: 0px auto 15px auto;
+            @media(min-width: 1100px) {
+                display: none;
+            }
+            
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex: 0 1 100%;
+        margin: 0;
+        @media(min-width: 1100px) {
+            justify-content: stretch;
+            flex: 0 1 80%;
+            margin: -15px 0px -15px -15px;
+        }
+        @include _maxWidth {
+            flex: 0 1 83%;
+            margin: -15px -2% -15px -15px;
+        }
+        @media(min-width: 600px) {
+            margin: 0 15px 0 0;
+        }
+        & > li {
+            margin: 8% 2%;
+            flex: 0 1 100%;
+            &:nth-child(2n) {
+                margin-right: 2%;
+            }
+            &:nth-child(3n) {
+                margin-right: 2%;
+            }
+            @include _maxWidth {
+                flex: 0 1 22%;
+                &:nth-child(4n) {
+                    margin-right: 15px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 1.5%;
+                }
+            }
+            @media(min-width: 1100px) {
+                margin: 1.5%;
+                flex: 0 1 30.8%;
+                &:nth-child(3n) {
+                    margin-right: 0px;
+                }
+            }
+            @include _992 {
+                flex: 0 1 30.6%;
+                margin: 1.5%;
+                &:nth-child(3n) {
+                    margin-right: 0px;
+                }
+                &:nth-child(2n) {
+                    margin-right: 1.5%;
+                }
+            }
+            @media(min-width: 600px) {
+                margin: 2%;
+                flex: 0 1 45%;
+                &:nth-child(2n) {
+                    margin-right: 0%;
+                }
+                &:nth-child(3n) {
+                    margin-right: 2%;
+                }
+            }
+        }
+    }
+    &__item {
+        display: block;
+        text-align: center;
+        margin: 5px;
+        @include _992 {
+            
+            justify-content: center;
+            text-align: left;
+        }
+        &--image {
+            display: inline-block;
+            flex: 0 0 100%;
+            width: 100%; height: 300px;
+            overflow: hidden;
+            @include _maxWidth {
+                flex: 0 0 23%;
+                width: 100%; height: 250px;
+            }
+            &-img {
+                width: 100%; height: 100%;
+                
+            }
+        }
+        &--title {
+            margin: 5px 0;
+            @include _992 {
+                margin: 15px 0;
+            }
+        }
+        &--descr {
+            padding: 0px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            //flex: 0 1 75%;
+            //min-height: 100%;
+            & > * {
+                margin: 10px 0;
+            }
+            @include _maxWidth {
+                flex: 0 1 73%;
+            }
+            @media(min-width: 1336px) {
+                flex: 0 1 75%;
+            }
+            @include _992 {
+                display: flex;
+                flex-direction: column;
+                padding: 15px 0 30px 0px;
+            }
+        }
+        &--text {
+            flex: 1 1 100%;
+            padding: 0px 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            align-items: center;
+            -webkit-line-clamp: 3;
+            text-overflow: ellipsis;
+            @include _992 {
+                padding: 0px 0;
+            }
+        }
+        & li {
+            margin: 2% 0;
+        }
+        &--btn {
+            margin: 2% 0;
+        }
+    }
+    &__btn {
+        margin: 55px auto 30px auto;
+    }
+}

@@ -1,0 +1,402 @@
+@@include("_header.html")
+
+<section class="list-vacancies section-padding">
+    <div class="filter-match">
+        <div class="filter-match-found">
+            Знайдено <span class="filter-match-value">12</span> вакансій
+            <a href="#" class="filter-match-submit">
+                Показати
+            </a>
+        </div>
+        <div class="filter-match-not-found">
+            Вакансій не знайдено
+        </div>
+    </div>
+    <div class="list-vacancies__container container">
+        <h2 class="list-vacancies__title section-title _decor-title">
+            Список вакансій
+        </h2>
+        <button class="list-vacancies__filter-btn-toggle btn">
+            Фільтр
+        </button>
+        <article class="list-vacancies__filter filter">
+            <h2 class="filter-title min-title _decor-title-min">
+                Фільтр
+                <button class="filter-close-btn btn"></button>
+            </h2>
+            <form class="filter-block">
+                <h3 class="filter-block__name">
+                    Спеціальність
+                </h3>
+                <ul class="filter-block__list">
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Сезонні роботи
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Склад
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Касир / продавець
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Прибиральник
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Водій
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            деревообробна промисловість
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Зварник
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Слюсар
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Робота з металом
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Будівництво / Ремонт
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Промислове виробництво
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Електрик
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Готельна індустрія / гастроном
+                        </label>
+                    </li>
+                </ul>
+            </form>
+            <form class="filter-block">
+                <h3 class="filter-block__name">
+                    Країна
+                </h3>
+                <ul class="filter-block__list">
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Польща
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Чехія
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Німеччина
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Нідерланди
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Бельгія
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="filter-check-box check-box" type="checkbox">
+                            <span class="filter-check-style check-style"></span>
+                            Данія
+                        </label>
+                    </li>
+                </ul>
+            </form>
+            <a href="#" class="filter-btn btn">
+                Примінити фільтр
+            </a>
+        </article>
+        <ul class="list-vacancies__list">
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="vacancy-page.html" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="vacancy-page.html" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <a href="#" class="list-vacancies__btn btn">
+            Завантажити ще
+        </a>
+    </div>
+</section>
+
+@@include("_footer.html")
