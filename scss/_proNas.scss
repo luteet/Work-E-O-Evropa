@@ -1,5 +1,5 @@
 .about-us-page {
-    margin: 0px 0 50px 0;
+    margin: 0px 0 200px 0;
     position: relative;
     &__bg {
         z-index: -1;
@@ -24,9 +24,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         @include _769 {
-            flex-direction: row-reverse;
+            flex-direction: row;
         }
         &._reverse {
             flex-direction: column-reverse;
