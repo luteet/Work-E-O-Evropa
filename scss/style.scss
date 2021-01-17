@@ -3,6 +3,7 @@
 @import 'null.scss';
 @import 'libs.scss';
 @import 'global.scss';
+@import 'animation.scss';
 @import 'text.scss';
 @import 'nav.scss';
 @import 'form.scss';
@@ -299,10 +300,10 @@
             width: 500px !important;
         }
     }
-    @media(min-height: 1080px) {
+    @media (min-width: 1920px) and (min-width: 1080px) {
         min-height: 1080px;
     }
-    @include _769 {
+    @include _992 {
         min-height: 100vh; 
     }
     &__bg {
@@ -319,6 +320,7 @@
 }
 
 .last-vacancies {
+    padding-bottom: 0 !important;
     &__container {
         text-align: center;
     }
@@ -437,6 +439,7 @@
         }
         &--bg {
             z-index: 0;
+            background-color: transparent;
             &::before {
                 opacity: 0.65;
             }
@@ -446,6 +449,7 @@
             left: 0; top: 0;
             width: 100%; height: 100%;
             z-index: -1;
+            background-color: #000;
             &-img {
                 object-fit: cover;
                 object-position: center;
@@ -462,6 +466,7 @@
         &--info {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin: 0 -5px;
             & li {
                 margin: 0 5px;
@@ -472,10 +477,9 @@
 
 .contacts {
     position: relative;
-    margin: -75px 0 0 0;
     z-index: 1;
     @include _769 {
-        margin: -75px 0 0 0;
+        margin: -130px 0 0 0;
     }
     &::before {
         content: '';

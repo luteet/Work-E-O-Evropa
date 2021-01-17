@@ -195,7 +195,6 @@ $(function() {
 
     body.on('click', function(e) {
         if($('.filter-block__list').has(e.target).length == 0) {
-            console.log(e.target)
             $('.filter-match').removeClass('active').addClass('hide');
         }
     })
@@ -204,7 +203,6 @@ $(function() {
     $('.list-vacancies__filter-btn-toggle').on('click', function() {
         $('.filter').addClass('active');
         body.on('click', function(e) {
-            console.log($('.list-vacancies__filter-btn-toggle').has(e.target).length)
             if($('.filter').has(e.target).length == 0 && !$(e.target).hasClass('list-vacancies__filter-btn-toggle')) {
                 $('.filter').removeClass('active');
             }
@@ -215,6 +213,8 @@ $(function() {
     $('.filter-close-btn').on('click', function() {
         $('.filter').removeClass('active');
     });
+
+    new WOW().init();
 
 
 });

@@ -1,22 +1,28 @@
 .about-us-page {
-    margin: 0px 0 200px 0;
+    margin: 50px 0 0px 0;
     position: relative;
+    @include _769 {
+        margin: 50px 0 200px 0;
+    }
     &__bg {
         z-index: -1;
         & .left-decor {
             transform: translateX(-50px);
         }
     }
+    
     &__container {
         text-align: center;
-        & > * {
-            &:not(:first-child) {
-                margin: 20% 0 0 0;
-            }
+    }
+    &__wrapper {
+        margin: -10% 0 0 0;
             @include _769 {
-                &:not(:first-child) {
-                    margin: 10% 0 0 0;
-                }
+                margin: -5% 0 0 0;
+            }
+        & > * {
+            margin-top: 20%;
+            @include _769 {
+                margin-top: 10%;
             }
         }
     }
@@ -24,9 +30,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        
         @include _769 {
             flex-direction: row;
+            
         }
         &._reverse {
             flex-direction: column-reverse;
@@ -49,6 +57,7 @@
         }
     }
     &__accent-block {
+        
         background-color: $accentDark;
         color: $white;
         border-radius: 25px;
