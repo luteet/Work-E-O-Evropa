@@ -495,6 +495,10 @@
     }
     &__bg {
         z-index: -2;
+        & img {
+            position: relative;
+            z-index: -1;
+        }
     }
     &__container {
         position: relative;
