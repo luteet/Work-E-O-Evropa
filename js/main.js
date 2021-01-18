@@ -263,7 +263,13 @@ $(function() {
         $('.filter').removeClass('active');
     });
 
-    new WOW().init();
+
+    new WOW(
+        {
+        mobile:       false,       // default
+      }).init();
+
+    
 
 
 });

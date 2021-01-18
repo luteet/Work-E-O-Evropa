@@ -46,11 +46,20 @@
             flex: 0 1 200px;
             max-width: 200px;
         }
-        &--img.logo-light-theme {
+        & .light-theme {
             display: block;
             @media (prefers-color-scheme: dark) {
                 display: none;
             }
+        }
+        & .dark-theme {
+            display: none;
+            @media (prefers-color-scheme: dark) {
+                display: block;
+            }
+        }
+        &--img.logo-light-theme {
+            
         }
     }
     &__nav {
@@ -302,6 +311,10 @@
             background: $gradientAccent;
             background-clip: text;
             font-weight: 900;
+            @media (prefers-color-scheme: dark) {
+                background: $white;
+                background-clip: text;
+            }
             @include adaptiv-font(16, 16);
             text-transform: uppercase;
             @include _992 {
