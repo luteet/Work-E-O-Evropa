@@ -7,6 +7,9 @@
     left: 0; top: 0%;
     min-width: 100%;
     background-color: $white;
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark;
+    }
     z-index: 10;
     transition: all .2s ease-in-out;
     box-shadow: $shadowAccent;
@@ -54,6 +57,9 @@
 
             width: 100%; height: 3px;
             background-color: $white;
+            @media (prefers-color-scheme: dark) {
+                background-color: $dark;
+            }
 
             z-index: 2;
         }
@@ -68,6 +74,10 @@
         display: none;
         position: absolute;
         background-color: $white;
+        @media (prefers-color-scheme: dark) {
+            background-color: $dark;
+            color: $white;
+        }
         z-index: 10;
         font-size: 14px;
         border-radius: 15px;
@@ -88,7 +98,8 @@
             font-weight: 700;
         }
         &-submit {
-            color: blue;
+            color: CornflowerBlue;
+
             &:hover {
                 text-decoration: underline;
             }
@@ -103,6 +114,9 @@
     }
     &-block {
         border: 1px solid #ccc;
+        @media (prefers-color-scheme: dark) {
+            border: 1px solid #333333;
+        }
         border-radius: 15px;
         margin: 5px 0;
         
@@ -114,7 +128,6 @@
             text-align: center;
             padding: 15px;
             border-radius: 15px;
-            
             background: $gradientAccent;
             @include _992 {
                 font-size: 21px;
@@ -125,16 +138,23 @@
             & label {
                 font-weight: 500;
                 display: flex;
-                padding-left: 15px;
-                padding: 0 15px 0 15px;
+                position: relative;
+                padding: 0 15px 0 45px;
                 cursor: pointer;
                 margin: 15px 0;
                 text-transform: capitalize;
+                @media (prefers-color-scheme: dark) {
+                    color: $white;
+                }
             }
         }
     }
 }
 .check-box {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
     display: inline-block;
     margin-right: 7px;
     cursor: pointer;
@@ -146,9 +166,10 @@
 .check-style {
     
     position: absolute;
+    left: 15px; top: 2px;
     border-radius: 5px;
     width: 20px; height: 20px;
-    margin: 0 0 0 -5px ;
+    
     background: $gradientAccent;
     &::before {
         content: '';
@@ -157,13 +178,16 @@
         width: 12px; height: 12px;
         border-radius: 2px;
         background-color: $white;
+        @media (prefers-color-scheme: dark) {
+            background-color: $dark;
+        }
     }
     &::after {
         content: '';
         position: absolute;
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
-        width: 35%; height: 35%;
+        width: 7px; height: 7px;
         background: $gradientAccent;
         z-index: 2;
         border-radius: 2px;

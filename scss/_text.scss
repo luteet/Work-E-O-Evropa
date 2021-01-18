@@ -1,20 +1,29 @@
 .main-title, .section-title, .min-title {
     text-transform: uppercase;
-    
+    @media (prefers-color-scheme: dark) {
+        color: $white;
+    }
+}
+
+p {
+    @media (prefers-color-scheme: dark) {
+        color: $white;
+    }
 }
 
 .main-title {
     text-align: center;
-    @include adaptiv-font(72, 12);
+    @include adaptiv-font(62, 18);
     font-weight: 900;
-    line-height: 125%;
+    line-height: 115%;
     margin: 0 0 5px 0;
+    
     @include _992 {
-        font-size: 72px;
+        font-size: 82px;
     }
 }
 .main-text {
-    @include adaptiv-font(21, 16);
+    @include adaptiv-font(21, 14);
     font-weight: 500;
     line-height: 155%;
     @include _992 {

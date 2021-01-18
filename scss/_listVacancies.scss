@@ -97,8 +97,10 @@
         display: block;
         text-align: center;
         margin: 5px;
+        @media (prefers-color-scheme: dark) {
+            color: $white;
+        }
         @include _992 {
-            
             justify-content: center;
             text-align: left;
         }
@@ -129,6 +131,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            
             //flex: 0 1 75%;
             //min-height: 100%;
             & > * {
@@ -153,8 +156,9 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             align-items: center;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 4;
             text-overflow: ellipsis;
+            @include adaptiv-font(14, 14);
             @include _992 {
                 padding: 0px 0;
             }

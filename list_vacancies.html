@@ -45,7 +45,12 @@
             <picture>
                 <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
                 <source media="(max-width: 992px)" srcset="images/logo/logoIco.svg">
-                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-img">
+                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
+            </picture>
+            <picture>
+                <source media="(min-width: 992px)" srcset="images/logo/logoLight.svg">
+                <source media="(max-width: 992px)" srcset="images/logo/logoIco.svg">
+                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
             </picture>
         </a>
         <nav class="header__nav nav">
@@ -539,6 +544,9 @@
                             </a>
                         </li>
                     </ul>
+                    <a href="#" class="footer__nav-social-link nav-social-link">
+                        <img src="upload/social/viber-ico.svg" alt="Viber" class="nav-social-link-icon" title="Приєднуйтесь до нашої групи у Viber">
+                    </a>
                 </ul>
             </div>
         </nav>

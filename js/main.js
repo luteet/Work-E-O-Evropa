@@ -1,5 +1,6 @@
 $(function() {
 
+
     var burger = $('.burger'), nav = $('.header__nav'), navAndBurger = $('.burger, .header__nav'), body = $('body'),
     
     header = $('.header'), HtmlBody = $('html, body');
