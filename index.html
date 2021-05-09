@@ -17,6 +17,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="640" />
     <meta property="og:type" content="website">
+    <style>
+        .theme-check { display: block; }
+        @media (prefers-color-scheme: dark) {
+            .theme-check { display: none; }
+        }
+    </style>
     <link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-16x16.png">
@@ -24,12 +30,23 @@
     <link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Work E&amp;O Evropa">
     <meta name="application-name" content="Work E&amp;O Evropa">
-    <meta name="msapplication-TileColor" content="#53588f">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <title>Work E&O Evropa</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div class="theme-check">
+        <div class="data-theme-dark">
+            <div class="data-theme-apple-touch-icon" data-theme='<link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/apple-touch-icon.png">'></div>
+            <div class="data-theme-icon-32-32" data-theme='<link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-32x32.png">'></div>
+            <div class="data-theme-icon-16-16" data-theme='<link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-16x16.png">'></div>
+            <div class="data-theme-manifest" data-theme='<link rel="manifest" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/site.webmanifest">'></div>
+            <div class="data-theme-mask-icon" data-theme='<link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/safari-pinned-tab.svg" color="#5bbad5">'></div>
+            <div class="data-theme-msapplication-TileColor" data-theme='<meta name="msapplication-TileColor" content="#222222">'></div>
+            <div class="data-theme-theme-color" data-theme='<meta name="theme-color" content="#222222">'></div>
+        </div>
+    </div>
     <div class="wrapper">
         <button class="btn-to-top hide">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 70" xml:space="preserve">
@@ -44,57 +61,87 @@
     <div class="header__container container">
         <a href="/" class="header__logo logo">
             <picture class="light-theme">
-                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
-                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
-                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
-            </picture>
-            <picture class="dark-theme">
                 <source media="(min-width: 992px)" srcset="images/logo/logoLight.svg">
                 <source media="(max-width: 992px)" srcset="images/logo/logoIcoDark.svg">
-                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
+                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
+            </picture>
+            <picture class="dark-theme">
+                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
+                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
+                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
             </picture>
         </a>
         <nav class="header__nav nav">
             <div class="header__nav-wrapper nav-wrapper">
                 <ul class="header__nav-list nav-list _row-list">
-                    <ul class="header__nav-menu nav-list-menu nav-menu">
-                        <li>
-                            <a href="index.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Головна</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Вакансії</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Про нас</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
-                                <span>Контакти</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="header__nav-contacts nav-list-contacts nav-contacts">
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <ul class="header__nav-menu nav-list-menu nav-menu">
+                            <li>
+                                <a href="index.html" class="header__nav-menu-link nav-menu-link" data-name-page="main-page">
+                                    <span>Головна</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link" data-name-page="vacansy-list">
+                                    <span>Вакансії</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link" data-name-page="about-us">
+                                    <span>Про нас</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
+                                    <span>Контакти</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-list-hover">
+                        <div class="header__nav-contacts-icon nav-list-contacts-icon theme-element"></div>
+                        <ul class="header__nav-contacts nav-list-contacts nav-contacts">
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
 
         </nav>
+        <div class="header__theme theme">
+            <script>
+
+                var theme_dark = {
+                    bg: '#222222',
+                    bg_2: '#252525',
+                    rev: '#FFFFFF',
+                    text: '#000000',
+                };
+                var theme_light = {
+                    bg: '#FFFFFF',
+                    bg_2: '#ebebeb',
+                    rev: '#222222',
+                    text: '#333333',
+                };
+                
+            </script>
+            <form class="theme-form" id="theme">
+                <label for="theme-dark" title="Темна тема">
+                    <div class="theme-icon theme-element"></div>
+                    <input class="theme-input" id="theme-dark" type="radio" name="theme" value="dark">
+                </label>
+            </form>
+        </div>
         <button class="header__burger burger">
             <span></span>
             <span></span>
@@ -118,7 +165,7 @@
                 </a>
             </div>
         </section>
-        <section class="categories section-padding wow animate__fadeIn" data-wow-offset="100">
+        <section class="categories section-padding waow animate__fadeIn" data-wow-offset="100">
             <div class="categories__container container">
                 <h2 class="categories__title section-title _decor-title">
                     Категорії вакансій
@@ -129,7 +176,7 @@
                             <a href="#" class="categories__item">
                                 <div class="categories__item-wrapper">
                                     <div class="categories__item--icon">
-                                        <img src="images/categories/seasonal-works.svg" alt="" loading="lazy" class="categories__item--icon-img">
+                                        <img src="images/categories/construction.svg" alt="" loading="lazy" class="categories__item--icon-img">
                                     </div>
                                     <h3 class="categories__item--title">
                                         Сезонні роботи
@@ -141,7 +188,7 @@
                             <a href="#" class="categories__item">
                                 <div class="categories__item-wrapper">
                                     <div class="categories__item--icon">
-                                        <img src="images/categories/loader.svg" alt="" loading="lazy" class="categories__item--icon-img">
+                                        <img src="images/categories/factory.svg" alt="" loading="lazy" class="categories__item--icon-img">
                                     </div>
                                     <h3 class="categories__item--title">
                                         Склад
@@ -153,7 +200,7 @@
                             <a href="#" class="categories__item">
                                 <div class="categories__item-wrapper">
                                     <div class="categories__item--icon">
-                                        <img src="images/categories/seller.svg" alt="" loading="lazy" class="categories__item--icon-img">
+                                        <img src="images/categories/loader.svg" alt="" loading="lazy" class="categories__item--icon-img">
                                     </div>
                                     <h3 class="categories__item--title">
                                         Касир / продавець
@@ -227,10 +274,37 @@
                             <p class="last-vacancies__item--text">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
                             </p>
-                            <ul class="last-vacancies__item--info">
+                            <ul class="last-vacancies__item--info vacancies-info">
                                 <li class="last-vacancies__item--place">
                                     <span class="vacancies-paragraph">КРАЇНА</span>
-                                    Польща
+                                    <span class="vacancies-info-text">польща</span>
+                                </li>
+                                <li class="last-vacancies__item--price">
+                                    <span class="vacancies-paragraph">Зарплата</span>
+                                    <span class="vacancies-info-text">10$/год</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="last-vacancies__item--btn btn">
+                                Детальніше
+                            </a>
+                        </div>
+                    </li>
+                    <!-- <li class="last-vacancies__slider--item last-vacancies__item">
+                        <div class="last-vacancies__item--bg bg-section"></div>
+                        <div class="last-vacancies__item--image">
+                            <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="last-vacancies__item--image-img">
+                        </div>
+                        <div class="last-vacancies__item--wrapper">
+                            <h3 class="last-vacancies__item--title min-title _decor-title-min">
+                                Робота зварника
+                            </h3>
+                            <p class="last-vacancies__item--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
+                            </p>
+                            <ul class="last-vacancies__item--info vacancies-info">
+                                <li class="last-vacancies__item--place">
+                                    <span class="vacancies-paragraph">КРАЇНА</span>
+                                    <span class="vacancies-info-text">польща</span>
                                 </li>
                                 <li class="last-vacancies__item--price">
                                     <span class="vacancies-paragraph">Зарплата</span>
@@ -254,10 +328,10 @@
                             <p class="last-vacancies__item--text">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
                             </p>
-                            <ul class="last-vacancies__item--info">
+                            <ul class="last-vacancies__item--info vacancies-info">
                                 <li class="last-vacancies__item--place">
                                     <span class="vacancies-paragraph">КРАЇНА</span>
-                                    Польща
+                                    <span class="vacancies-info-text">польща</span>
                                 </li>
                                 <li class="last-vacancies__item--price">
                                     <span class="vacancies-paragraph">Зарплата</span>
@@ -281,10 +355,10 @@
                             <p class="last-vacancies__item--text">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
                             </p>
-                            <ul class="last-vacancies__item--info">
+                            <ul class="last-vacancies__item--info vacancies-info">
                                 <li class="last-vacancies__item--place">
                                     <span class="vacancies-paragraph">КРАЇНА</span>
-                                    Польща
+                                    <span class="vacancies-info-text">польща</span>
                                 </li>
                                 <li class="last-vacancies__item--price">
                                     <span class="vacancies-paragraph">Зарплата</span>
@@ -308,10 +382,10 @@
                             <p class="last-vacancies__item--text">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
                             </p>
-                            <ul class="last-vacancies__item--info">
+                            <ul class="last-vacancies__item--info vacancies-info">
                                 <li class="last-vacancies__item--place">
                                     <span class="vacancies-paragraph">КРАЇНА</span>
-                                    Польща
+                                    <span class="vacancies-info-text">польща</span>
                                 </li>
                                 <li class="last-vacancies__item--price">
                                     <span class="vacancies-paragraph">Зарплата</span>
@@ -322,34 +396,7 @@
                                 Детальніше
                             </a>
                         </div>
-                    </li>
-                    <li class="last-vacancies__slider--item last-vacancies__item">
-                        <div class="last-vacancies__item--bg bg-section"></div>
-                        <div class="last-vacancies__item--image">
-                            <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="last-vacancies__item--image-img">
-                        </div>
-                        <div class="last-vacancies__item--wrapper">
-                            <h3 class="last-vacancies__item--title min-title _decor-title-min">
-                                Робота зварника
-                            </h3>
-                            <p class="last-vacancies__item--text">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ut? Incidunt laboriosam enim provident aliquid natus! Nobis, a dolore maxime quibusdam veritatis doloremque iure cumque dolores quam velit tempore perspiciatis?
-                            </p>
-                            <ul class="last-vacancies__item--info">
-                                <li class="last-vacancies__item--place">
-                                    <span class="vacancies-paragraph">КРАЇНА</span>
-                                    Польща
-                                </li>
-                                <li class="last-vacancies__item--price">
-                                    <span class="vacancies-paragraph">Зарплата</span>
-                                    10$/год
-                                </li>
-                            </ul>
-                            <a href="#" class="last-vacancies__item--btn btn">
-                                Детальніше
-                            </a>
-                        </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <a href="#" class="last-vacancies__btn btn wow animate__fadeIn" data-wow-offset="10">
                     Подивитись всі вакансії
@@ -376,15 +423,15 @@
                             <input type="tel" name="phone" id="field-tel" class="form-field" placeholder="Номер телефона" required>
                         </label>
                         <label class="large-label" for="field-message">
-                            <textarea class="form-field" rows="10" name="message" id="field-message" placeholder="Повідомлення" required></textarea>
+                            <textarea class="form-field form-message" rows="10" name="message" id="field-message" placeholder="Повідомлення" required></textarea>
                         </label>
                         <label class="large-label" for="field-btn">
                             <button type="submit" id="field-btn" class="form-btn btn">
                                 Відправити
                             </button>
                         </label>
-                        <span class="message-sending"></span>
-                        <span class="message-notsending"></span>
+                        <span class="send-message send-message-sending">Повідомлення відправлено</span>
+                        <span class="send-message send-message-notsending">Сталася помилака...</span>
                     </div>
                 </form>
             </div>
@@ -431,6 +478,16 @@
                                 +38 (055) 555 55 55
                             </a>
                         </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
                     </ul>
                     <a href="#" class="footer__nav-social-link nav-social-link">
                         <img src="upload/social/viber-ico.svg" alt="Viber" class="nav-social-link-icon" title="Приєднуйтесь до нашої групи у Viber">
@@ -441,7 +498,8 @@
     </div>
 </footer>
 </div>
-
+<script src="js/dinapt-jquery-min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

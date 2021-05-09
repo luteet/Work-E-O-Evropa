@@ -1,14 +1,10 @@
-.main-title, .section-title, .min-title {
+.section-title, .min-title, .article-title {
     text-transform: uppercase;
-    @media (prefers-color-scheme: dark) {
-        color: $white;
-    }
+    color: var(--text);
 }
 
 p {
-    @media (prefers-color-scheme: dark) {
-        color: $white;
-    }
+    color: var(--text);
 }
 
 .main-title {
@@ -16,18 +12,18 @@ p {
     @include adaptiv-font(62, 18);
     font-weight: 900;
     line-height: 115%;
-    margin: 0 0 5px 0;
+    margin: 0 0 25px 0;
     
     @include _992 {
         font-size: 82px;
     }
 }
 .main-text {
-    @include adaptiv-font(21, 14);
+    @include adaptiv-font(14, 16);
     font-weight: 500;
-    line-height: 155%;
+    line-height: 165%;
     @include _992 {
-        font-size: 21px;
+        font-size: 16px;
     }
 }
 
@@ -52,6 +48,21 @@ p {
         &-min::before {
             width: 25px; height: 5px;
         }
+    }
+}
+
+._decor-article-title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%; bottom: 0;
+        transform: translate(-50%, 50%);
+        border-radius: 15px;
+        background: $gradientAccent;
+        width: 45px; height: 10px;
     }
 }
 
@@ -86,11 +97,11 @@ p {
 }
 
 .section-title {
-    line-height: 105%;
+    line-height: 125%;
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 50px;
-    @include adaptiv-font(48, 18);
+    @include adaptiv-font(48, 20);
     font-weight: 700;
     @include _992 {
         font-size: 48px;
@@ -99,15 +110,37 @@ p {
     
 }
 .min-title {
-    @include adaptiv-font(24, 16);
+    @include adaptiv-font(18, 18);
     font-weight: 700;
+    line-height: 165%;
     &._decor-title-min {
         padding: 0 0 10px 0;
         margin: 0 0 15px 0;
         
     }
     @include _992 {
-        font-size: 24px;
+        font-size: 18px;
+    }
+}
+
+.article-title {
+    @include adaptiv-font(36, 24);
+    font-weight: 700;
+    line-height: 125%;
+    &._decor-title-min {
+        padding: 0 0 10px 0;
+        margin: 0 0 15px 0;
+        
+    }
+    @include _992 {
+        font-size: 36px;
+    }
+}
+
+.accent-text {
+    @include adaptiv-font(16, 16);
+    @include _992 {
+        font-size: 16px;
     }
 }
 
@@ -118,6 +151,7 @@ p {
 .vacancies-paragraph {
     text-transform: uppercase;
     font-weight: 700;
+    
     &::after {
         content: ':';
     }

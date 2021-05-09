@@ -3,13 +3,30 @@ $accentDark: #1b1e3f;
 $gradientAccent: linear-gradient( 0deg, rgb(66,70,114) 0%, rgb(91,97,158) 100%);
 $gradientVignette: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7) 100%);
 $gradientAccentGray: linear-gradient( 0deg, rgba(210,210,210, 0.5) 0%, rgba(255,255,255, 0.5) 100%);
+$gradientText: linear-gradient(180deg, rgba(91, 97, 158, 1) 0%, rgba(115, 123, 255, 1) 100%);
   
-$shadowAccent: 0px 0px 6.58px 0.42px rgba(0, 0, 0, 0.34);  
+$shadowAccent: 0px 0px 6.58px 0.42px rgba(0, 0, 0, 0.34);
+
+$shadowHover: 0px 5px 15px -2px rgba(0, 0, 0, 0.3);
+$shadowHoverNone: 0px 5px 15px 0px rgba(0, 0, 0, 0);
 
 $white: #FFFFFF;
 $black: #000000;
 
+$lightGray: #ebebeb;
+
 $dark: #222222;
+$dark2: #252525;
+
+
+:root {
+  --bg: #FFFFFF;
+  --bg_2: #ebebeb;
+  --rev: #222222;
+  --scroll: #dddddd;
+  --text: #333333;
+}
+
 
   
 @font-face {
@@ -18,26 +35,28 @@ $dark: #222222;
     font-display: swap;
     font-style: normal;
     
-    src: url(Roboto-Black.woff) format('woff'), url(Roboto-Black.woff2) format('woff2'), 
+    src: url('assets/css/Roboto-Black.woff') format('woff'), url('assets/css/Roboto-Black.woff2') format('woff2'), url('assets/css/Roboto-Black.ttf') format('truetype');
 }
 @font-face {
     font-weight: 700;
     font-family: "Roboto";
     font-display: swap;
     font-style: normal;
-    src: url(Roboto-Bold.woff) format('woff'), url(Roboto-Bold.woff2) format('woff2'),
+    src: url('assets/css/Roboto-Bold.woff') format('woff'), url('assets/css/Roboto-Bold.woff2') format('woff2'), 
+    url('assets/css/Roboto-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: "Roboto";
     font-display: swap;
     font-style: normal;
     font-weight: 500;
-    src: url(Roboto-Medium.woff) format('woff'), url(Roboto-Medium.woff2) format('woff2'),
+    src: url('assets/css/Roboto-Medium.woff') format('woff'), url('assets/css/Roboto-Medium.woff2') format('woff2'), url('assets/css/Roboto-Medium.ttf') format('truetype');
 }
 @font-face {
     font-family: "Roboto";
     font-display: swap;
     font-style: normal;
     font-weight: 400;
-    src: url(Roboto-Regular.woff) format('woff'), url(Roboto-Regular.woff2) format('woff2'),
+    src: url('assets/css/Roboto-Regular.woff') format('woff'), url('assets/css/Roboto-Regular.woff2') format('woff2'), url('assets/css/Roboto-Regular.ttf') format('truetype');
+    
 }

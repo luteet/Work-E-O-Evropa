@@ -1,13 +1,20 @@
 .about-us-page {
-    margin: 50px 0 0px 0;
+    margin: 0px 0 50px 0;
     position: relative;
-    @include _769 {
+    @include _maxWidth {
         margin: 50px 0 200px 0;
     }
+    @include _769 {
+        margin: 0px 0 100px 0;
+    }
     &__bg {
+        display: none;
         z-index: -1;
         & .left-decor {
             transform: translateX(-50px);
+        }
+        @include _992 {
+            display: block;
         }
     }
     
@@ -48,6 +55,9 @@
             @include _769 {
                 margin: 0;
             }
+            & p {
+                margin: 25px 0 0 0;
+            }
         }
         &--image {
             overflow: hidden;
@@ -65,7 +75,7 @@
         & a {
             color: CornflowerBlue !important;
         }
-        &--list {
+        & ul {
             margin: 40px 0;
             & li {
                 margin: 10px 0;

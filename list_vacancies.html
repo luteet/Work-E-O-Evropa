@@ -16,6 +16,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="640" />
     <meta property="og:type" content="website">
+    <style>
+        .theme-check { display: block; }
+        @media (prefers-color-scheme: dark) {
+            .theme-check { display: none; }
+        }
+    </style>
     <link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-16x16.png">
@@ -23,12 +29,23 @@
     <link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Work E&amp;O Evropa">
     <meta name="application-name" content="Work E&amp;O Evropa">
-    <meta name="msapplication-TileColor" content="#53588f">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <title>Work E&O Evropa</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div class="theme-check">
+        <div class="data-theme-dark">
+            <div class="data-theme-apple-touch-icon" data-theme='<link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/apple-touch-icon.png">'></div>
+            <div class="data-theme-icon-32-32" data-theme='<link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-32x32.png">'></div>
+            <div class="data-theme-icon-16-16" data-theme='<link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-16x16.png">'></div>
+            <div class="data-theme-manifest" data-theme='<link rel="manifest" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/site.webmanifest">'></div>
+            <div class="data-theme-mask-icon" data-theme='<link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/safari-pinned-tab.svg" color="#5bbad5">'></div>
+            <div class="data-theme-msapplication-TileColor" data-theme='<meta name="msapplication-TileColor" content="#222222">'></div>
+            <div class="data-theme-theme-color" data-theme='<meta name="theme-color" content="#222222">'></div>
+        </div>
+    </div>
     <div class="wrapper">
         <button class="btn-to-top hide">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 70" xml:space="preserve">
@@ -43,57 +60,87 @@
     <div class="header__container container">
         <a href="/" class="header__logo logo">
             <picture class="light-theme">
-                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
-                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
-                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
-            </picture>
-            <picture class="dark-theme">
                 <source media="(min-width: 992px)" srcset="images/logo/logoLight.svg">
                 <source media="(max-width: 992px)" srcset="images/logo/logoIcoDark.svg">
-                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
+                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
+            </picture>
+            <picture class="dark-theme">
+                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
+                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
+                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
             </picture>
         </a>
         <nav class="header__nav nav">
             <div class="header__nav-wrapper nav-wrapper">
                 <ul class="header__nav-list nav-list _row-list">
-                    <ul class="header__nav-menu nav-list-menu nav-menu">
-                        <li>
-                            <a href="index.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Головна</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Вакансії</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Про нас</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
-                                <span>Контакти</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="header__nav-contacts nav-list-contacts nav-contacts">
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <ul class="header__nav-menu nav-list-menu nav-menu">
+                            <li>
+                                <a href="index.html" class="header__nav-menu-link nav-menu-link" data-name-page="main-page">
+                                    <span>Головна</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link" data-name-page="vacansy-list">
+                                    <span>Вакансії</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link" data-name-page="about-us">
+                                    <span>Про нас</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
+                                    <span>Контакти</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-list-hover">
+                        <div class="header__nav-contacts-icon nav-list-contacts-icon theme-element"></div>
+                        <ul class="header__nav-contacts nav-list-contacts nav-contacts">
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
 
         </nav>
+        <div class="header__theme theme">
+            <script>
+
+                var theme_dark = {
+                    bg: '#222222',
+                    bg_2: '#252525',
+                    rev: '#FFFFFF',
+                    text: '#000000',
+                };
+                var theme_light = {
+                    bg: '#FFFFFF',
+                    bg_2: '#ebebeb',
+                    rev: '#222222',
+                    text: '#333333',
+                };
+                
+            </script>
+            <form class="theme-form" id="theme">
+                <label for="theme-dark" title="Темна тема">
+                    <div class="theme-icon theme-element"></div>
+                    <input class="theme-input" id="theme-dark" type="radio" name="theme" value="dark">
+                </label>
+            </form>
+        </div>
         <button class="header__burger burger">
             <span></span>
             <span></span>
@@ -115,176 +162,284 @@
         </div>
     </div>
     <div class="list-vacancies__container container">
-        <h2 class="list-vacancies__title section-title _decor-title wow animate__fadeIn" data-wow-offset="100">
-            Список вакансій
-        </h2>
-        <button class="list-vacancies__filter-btn-toggle btn">
+        <div class="list-vacancies__info wow animate__fadeInUp">
+            <h2 class="list-vacancies__title section-title _decor-title">
+                Список вакансій
+            </h2>
+            <p>
+                Ми пропонуємо Вам безкоштовні актуальні вакансії по різним спеціальностям. Перевірені і надійні роботодавці, страхування та візова підтримка.
+            </p>
+            <div class="list-vacancies__auto-loading">
+                <label>
+                    <input class="check-box" type="checkbox">
+                    <span class="check-style"></span>
+                        Автоматичне Завантаження Вакансій
+                </label>
+            </div>
+        </div>
+        <button class="list-vacancies__filter-btn-toggle btn _not-hover">
             Фільтр
         </button>
+        <button class="filter-close-btn"></button>
         <article class="list-vacancies__filter filter">
-            <h2 class="filter-title min-title _decor-title-min wow animate__fadeIn">
+            <div class="filter-wrapper wow">
+            <h2 class="filter-title min-title _decor-title-min ">
                 Фільтр
-                <button class="filter-close-btn btn"></button>
             </h2>
-            <form class="filter-block wow animate__fadeIn">
-                <h3 class="filter-block__name">
-                    Спеціальність
-                </h3>
-                <ul class="filter-block__list">
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Сезонні роботи
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Склад
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Касир / продавець
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Прибиральник
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Водій
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            деревообробна промисловість
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Зварник
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Слюсар
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Робота з металом
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Будівництво / Ремонт
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Промислове виробництво
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Електрик
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Готельна індустрія / гастроном
-                        </label>
-                    </li>
-                </ul>
-            </form>
-            <form class="filter-block wow animate__fadeIn">
-                <h3 class="filter-block__name">
-                    Країна
-                </h3>
-                <ul class="filter-block__list">
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Польща
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Чехія
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Німеччина
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Нідерланди
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Бельгія
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input class="filter-check-box check-box" type="checkbox">
-                            <span class="filter-check-style check-style"></span>
-                            Данія
-                        </label>
-                    </li>
-                </ul>
-            </form>
-            <a href="#" class="filter-btn btn">
-                Примінити фільтр
-            </a>
+            <div class="list-vacancies__filter-result filter-result"></div>
+            <form class="filter-form" action="" name="category-filter" id="category-filter">
+                <button type="reset" class="filter-btn-reset">
+                    Очистити фільтр
+                </button>
+                <div class="filter-block">
+                    <h3 class="filter-block__name">
+                        Країна
+                    </h3>
+                    <ul class="filter-block__list">
+                        <li class="sub-li">
+                            <label class="check-box-label label-have-sub theme-element" id="#polshha-cities">
+                                <input class="filter-check-box check-box" name="country" value="polshha" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Польща</span>
+                            </label>
+                            <ul class="filter-block__sub-list" style="display: none;">
+                                <li>
+                                    <label class="label-sub">
+                                        <input class="filter-sub-check-box check-box" checked name="city_1" value="city_val_1" type="checkbox">
+                                        <span class="filter-check-style check-style"></span>
+                                        <span class="filter-check-box-text">Місто №1</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-sub">
+                                        <input class="filter-sub-check-box check-box" name="city_2" value="city_val_2" type="checkbox">
+                                        <span class="filter-check-style check-style"></span>
+                                        <span class="filter-check-box-text">Місто №2</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-sub">
+                                        <input class="filter-sub-check-box check-box" name="city_3" value="city_val_3" type="checkbox">
+                                        <span class="filter-check-style check-style"></span>
+                                        <span class="filter-check-box-text">Місто №3</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="filter-more-list-toggle _hidden" data-active="більше" data-not-active="менше">
+                                більше
+                            </button>
+                        </li>
+                        <!-- <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Чехія
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Німеччина
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Нідерланди
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Бельгія
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Данія
+                            </label>
+                        </li> -->
+                        
+                    </ul>
+                    
+                </div>
+                <div class="filter-block">
+                    <h3 class="filter-block__name">
+                        Test radio
+                    </h3>
+                    <ul class="filter-block__list">
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" checked type="radio" name="radio" value="all">
+                                <span class="filter-check-style check-style _radio"></span>
+                                <span class="filter-check-box-text">All</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="radio" name="radio" value="value_1">
+                                <span class="filter-check-style check-style  _radio"></span>
+                                <span class="filter-check-box-text">Value 1</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="radio" name="radio" value="value_2">
+                                <span class="filter-check-style check-style  _radio"></span>
+                                <span class="filter-check-box-text">Value 2</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="radio" name="radio" value="value_3">
+                                <span class="filter-check-style check-style _radio"></span>
+                                <span class="filter-check-box-text">Value 3</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-block">
+                    <h3 class="filter-block__name">
+                        Спеціальність
+                    </h3>
+                    <ul class="filter-block__list">
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" checked type="checkbox" name="fuck" value="fuck">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Сезонні роботи</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox" name="fuck" value="asf">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Склад</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" name="hi" value="asf" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Касир / продавець</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" name="hi_2" value="asf" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Прибиральник</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Водій</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">деревообробна промисловість</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Зварник</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Слюсар</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Робота з металом</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                <span class="filter-check-box-text">Будівництво / Ремонт</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Промислове виробництво
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Електрик
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check-box-label">
+                                <input class="filter-check-box check-box" type="checkbox">
+                                <span class="filter-check-style check-style"></span>
+                                Готельна індустрія / гастроном
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                
+            <div class="filter-nav-block">
+                <button type="submit" class="filter-btn filter-btn-submit btn">
+                    Примінити фільтр
+                </button>
+                <button type="reset" class="filter-btn-reset">
+                    Очистити фільтр
+                </button>
+            </div>
+        </form>
+        </div>
+        
         </article>
+        <div class="filter-nav-block _fixed-version">
+            <button type="submit" class="filter-btn filter-btn-submit btn">
+                Примінити фільтр
+            </button>
+            <button type="reset" class="filter-btn-reset">
+                Очистити фільтр
+            </button>
+        </div>
+        
         <ul class="list-vacancies__list">
+            <li class="list-vacancies__list--column" id="column-1">
+
+            </li>
+            <li class="list-vacancies__list--column" id="column-2">
+                
+            </li>
+            <li class="list-vacancies__list--column" id="column-3">
+                
+            </li>
             <li class="list-vacancies__list--item list-vacancies__item wow animate__fadeInUp wow animate__fadeInUp">
                 <a href="vacancy-page.html" class="list-vacancies__item--image vacancies-image">
                     <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img img-styles">
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 1
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -298,6 +453,8 @@
                         <li class="list-vacancies__item--price vacancies-price">
                             <span class="vacancies-paragraph">Зарплата</span>
                             10$/год
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
                         </li>
                     </ul>
                     <a href="vacancy-page.html" class="list-vacancies__item--btn btn">
@@ -311,7 +468,34 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 2
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item wow animate__fadeInUp dinapt" data-dinapt="[992 > #column-1]">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img img-styles">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника 3
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -338,7 +522,7 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 4
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -365,7 +549,34 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 5
+                    </h3>
+                    <p class="list-vacancies__item--text vacancies-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
+                        
+                    </p>
+                    <ul class="list-last-vacancies__item--info vacancies-info">
+                        <li class="list-vacancies__item--place vacancies-place">
+                            <span class="vacancies-paragraph">КРАЇНА</span>
+                            Польща
+                        </li>
+                        <li class="list-vacancies__item--price vacancies-price">
+                            <span class="vacancies-paragraph">Зарплата</span>
+                            10$/год
+                        </li>
+                    </ul>
+                    <a href="#" class="list-vacancies__item--btn btn">
+                        Детальніше
+                    </a>
+                </div>
+            </li>
+            <li class="list-vacancies__list--item list-vacancies__item wow animate__fadeInUp dinapt" data-dinapt="[992 > #column-1]">
+                <a href="#" class="list-vacancies__item--image vacancies-image">
+                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img img-styles">
+                </a>
+                <div class="list-vacancies__item--descr">
+                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
+                        Робота зварника 6
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -392,7 +603,7 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 7
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -419,7 +630,7 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 8
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -446,34 +657,7 @@
                 </a>
                 <div class="list-vacancies__item--descr">
                     <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
-                    </h3>
-                    <p class="list-vacancies__item--text vacancies-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
-                        
-                    </p>
-                    <ul class="list-last-vacancies__item--info vacancies-info">
-                        <li class="list-vacancies__item--place vacancies-place">
-                            <span class="vacancies-paragraph">КРАЇНА</span>
-                            Польща
-                        </li>
-                        <li class="list-vacancies__item--price vacancies-price">
-                            <span class="vacancies-paragraph">Зарплата</span>
-                            10$/год
-                        </li>
-                    </ul>
-                    <a href="#" class="list-vacancies__item--btn btn">
-                        Детальніше
-                    </a>
-                </div>
-            </li>
-            <li class="list-vacancies__list--item list-vacancies__item wow animate__fadeInUp">
-                <a href="#" class="list-vacancies__item--image vacancies-image">
-                    <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="list-vacancies__item--image-img vacancies-image-img img-styles">
-                </a>
-                <div class="list-vacancies__item--descr">
-                    <h3 class="list-vacancies__item--title vacancies-title min-title _decor-title-min">
-                        Робота зварника
+                        Робота зварника 9
                     </h3>
                     <p class="list-vacancies__item--text vacancies-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum sunt consectetur rerum minima dicta ipsa explicabo! Ipsa voluptatum aut nihil quas similique doloremque, quaerat ut labore necessitatibus totam nemo?
@@ -495,9 +679,16 @@
                 </div>
             </li>
         </ul>
-        <a href="#" class="list-vacancies__btn btn wow animate__fadeInUp">
-            Завантажити ще
-        </a>
+        
+        <div class="list-vacancies__loader">
+            <button href="#" class="list-vacancies__switch link" data-loader-disable="Вимкнути автоматичне завантаження" data-loader-enable="Увімкнути автоматичне завантаження">
+                
+            </button>
+            <a href="#" class="list-vacancies__btn btn wow animate__fadeInUp">
+                Завантажити ще
+            </a>
+        </div>
+        
     </div>
 </section>
 
@@ -543,6 +734,16 @@
                                 +38 (055) 555 55 55
                             </a>
                         </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
                     </ul>
                     <a href="#" class="footer__nav-social-link nav-social-link">
                         <img src="upload/social/viber-ico.svg" alt="Viber" class="nav-social-link-icon" title="Приєднуйтесь до нашої групи у Viber">
@@ -553,7 +754,8 @@
     </div>
 </footer>
 </div>
-
+<script src="js/dinapt-jquery-min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

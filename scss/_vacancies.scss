@@ -8,8 +8,7 @@
         }
     }
     &-text {
-        @media (prefers-color-scheme: dark) {
-            color: $white;
-        }
+        color: var(--text);
     }
 }
+

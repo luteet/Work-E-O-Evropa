@@ -1,40 +1,51 @@
-/* @font-face {
-    font-family: "font";
-    font-display: swap;
-    src: url(../css/font.woff);
-} */
 
 body {
     font-family: "Roboto";
-    @include adaptiv-font(16, 16);
+    @include adaptiv-font(16, 14);
     font-weight: 400;
-    line-height: 150%;
-    &::-webkit-scrollbar {
-        @media (prefers-color-scheme: dark) {
-            background-color: $dark;
-        }
-    }
-    &::-webkit-scrollbar-track {
-        @media (prefers-color-scheme: dark) {
-            background-color: $dark;
-        }
-        
-    }
-    &::-webkit-scrollbar-thumb {
-        @media (prefers-color-scheme: dark) {
-            background-color: #333;
-        }
-      }
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark;   
+    line-height: 165%;
+    //color: #333;
+    background-color: var(--bg);
+    color: var(--text);
+    &.lock {
+        overflow: hidden;
     }
     
+    
+}
+
+body, * {
+    &::-webkit-scrollbar {
+        background-color: var(--bg);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--bg);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scroll);
+      }
+    
+}
+
+a {
+    color: CornflowerBlue;
+    background-color: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 section {
     position: relative;
     z-index: 2;
     transition: all .2s ease-in-out;
+}
+
+.dinapt {
+    opacity: 0;
+    &.inited {
+        opacity: 1;
+    }
 }
 
 .wrapper {
@@ -80,17 +91,16 @@ section {
         &::before, &::after {
             display: none;
         }
-        & .left-decor {
+        & .left-decor, .right-decor {
             position: absolute;
-            left: -100px; bottom: 0;
             width: 30%;
+        }
+        & .left-decor {
+            left: -100px; bottom: 0;
             
         }
         & .right-decor {
-            position: absolute;
             right: -50px; top: 0;
-            width: 30%;
-            
         }
     }
     
@@ -103,7 +113,7 @@ section {
     }
     &::before {
         background-color: $black;
-        opacity: 0.35;
+        opacity: 0.45;
     }
     &::after {
         background: $gradientVignette;
@@ -117,33 +127,96 @@ section {
     }
 }
 
-
+.link {
+    color: cornflowerblue;
+    background-color: transparent;
+    text-transform: capitalize;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .btn {
     display: inline-block;
     text-transform: capitalize;
     border-radius: 15px;
-    background: $gradientAccent;
+    position: relative;
+    
+    //background: $gradientAccent;
+    background: transparent;
     color: $white;
     font-weight: 500;
     @include adaptiv-font(18, 14);
-    box-shadow: $shadowAccent;
+    box-shadow: $shadowHoverNone;
     padding: 1em 25px;
     transition: all .2s ease-in-out;
     margin: 35px 0 0 0;
+    transform: translate(0, 0%);
+    overflow: hidden;
     @include _maxWidth {
         font-size: 21px;
     }
+    
+    &::before, &::after {
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        left: -50%; top: -50%;
+        transform: translate(15%, -15%) rotate(180deg);
+
+        width: 150%; padding-top: 125%;
+
+        background: $gradientAccent;
+
+        z-index: -1;
+
+        transition: all 0.5s ease-in-out;
+    }
+    &::after {
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+
+        box-shadow: inset 0px 0px 3px 5px rgba(0,0,0,0.01);
+        opacity: 1;
+
+        transition: all .2s ease-in-out;
+    }
+    
     &:hover {
-        transform: scale(1.1);
+        @include _992 {
+            transform: translate(0, -10%);
+            box-shadow: $shadowHover;
+            &::before {
+                transform: translate(15%, -25%) rotate(0deg);
+            }
+            &::after {
+                opacity: 0;
+            }
+        }
+        text-decoration: none;
+        
+    }
+    
+    &._not-hover:hover {
+        text-decoration: none;
+        @include _992 {
+            transform: scale(1);
+        }
     }
 }
 
+._reverse {
+    flex-direction: column-reverse;
+        @include _769 {
+        flex-direction: row-reverse;
+    }
+}
 
 .btn-to-top {
     position: fixed;
     right: 15px; bottom: 35px;
-    width: 50px; height: 20px;
+    width: 55px; height: 25px;
     z-index: 100;
     background-color: transparent;
     opacity: 1;
@@ -160,7 +233,11 @@ section {
 }
 
 
-
+.sticky-wrapper {
+    width: 100%;
+    z-index: 20;
+    
+}
 
 
 

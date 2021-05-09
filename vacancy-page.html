@@ -16,6 +16,12 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="640" />
     <meta property="og:type" content="website">
+    <style>
+        .theme-check { display: block; }
+        @media (prefers-color-scheme: dark) {
+            .theme-check { display: none; }
+        }
+    </style>
     <link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/favicon-16x16.png">
@@ -23,12 +29,23 @@
     <link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Work E&amp;O Evropa">
     <meta name="application-name" content="Work E&amp;O Evropa">
-    <meta name="msapplication-TileColor" content="#53588f">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <title>Work E&O Evropa</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div class="theme-check">
+        <div class="data-theme-dark">
+            <div class="data-theme-apple-touch-icon" data-theme='<link rel="apple-touch-icon" sizes="180x180" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/apple-touch-icon.png">'></div>
+            <div class="data-theme-icon-32-32" data-theme='<link rel="icon" type="image/png" sizes="32x32" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-32x32.png">'></div>
+            <div class="data-theme-icon-16-16" data-theme='<link rel="icon" type="image/png" sizes="16x16" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/favicon-16x16.png">'></div>
+            <div class="data-theme-manifest" data-theme='<link rel="manifest" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/site.webmanifest">'></div>
+            <div class="data-theme-mask-icon" data-theme='<link rel="mask-icon" href="https://luteet.github.io/Work-E-O-Evropa/images/favicon_dark/safari-pinned-tab.svg" color="#5bbad5">'></div>
+            <div class="data-theme-msapplication-TileColor" data-theme='<meta name="msapplication-TileColor" content="#222222">'></div>
+            <div class="data-theme-theme-color" data-theme='<meta name="theme-color" content="#222222">'></div>
+        </div>
+    </div>
     <div class="wrapper">
         <button class="btn-to-top hide">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 70" xml:space="preserve">
@@ -43,57 +60,87 @@
     <div class="header__container container">
         <a href="/" class="header__logo logo">
             <picture class="light-theme">
-                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
-                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
-                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
-            </picture>
-            <picture class="dark-theme">
                 <source media="(min-width: 992px)" srcset="images/logo/logoLight.svg">
                 <source media="(max-width: 992px)" srcset="images/logo/logoIcoDark.svg">
-                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
+                <img src="images/logo/logoDark.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-light-theme logo-img">
+            </picture>
+            <picture class="dark-theme">
+                <source media="(min-width: 992px)" srcset="images/logo/logoDark.svg">
+                <source media="(max-width: 992px)" srcset="images/logo/logoIcoLight.svg">
+                <img src="images/logo/logoLight.svg" loading="lazy" alt="Логотип" class="header__logo--img logo-dark-theme logo-img">
             </picture>
         </a>
         <nav class="header__nav nav">
             <div class="header__nav-wrapper nav-wrapper">
                 <ul class="header__nav-list nav-list _row-list">
-                    <ul class="header__nav-menu nav-list-menu nav-menu">
-                        <li>
-                            <a href="index.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Головна</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Вакансії</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link">
-                                <span>Про нас</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
-                                <span>Контакти</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="header__nav-contacts nav-list-contacts nav-contacts">
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
-                                +38 (055) 555 55 55
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <ul class="header__nav-menu nav-list-menu nav-menu">
+                            <li>
+                                <a href="index.html" class="header__nav-menu-link nav-menu-link" data-name-page="main-page">
+                                    <span>Головна</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="list_vacancies.html" class="header__nav-menu-link nav-menu-link" data-name-page="vacansy-list">
+                                    <span>Вакансії</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pro-nas.html" class="header__nav-menu-link nav-menu-link" data-name-page="about-us">
+                                    <span>Про нас</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#contacts" data-href="#contacts" class="header__nav-menu-link nav-menu-link btn-scroll">
+                                    <span>Контакти</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-list-hover">
+                        <div class="header__nav-contacts-icon nav-list-contacts-icon theme-element"></div>
+                        <ul class="header__nav-contacts nav-list-contacts nav-contacts">
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+380555555555" class="header__nav-contacts-tel nav-contacts-tel">
+                                    +38 (055) 555 55 55
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
 
         </nav>
+        <div class="header__theme theme">
+            <script>
+
+                var theme_dark = {
+                    bg: '#222222',
+                    bg_2: '#252525',
+                    rev: '#FFFFFF',
+                    text: '#000000',
+                };
+                var theme_light = {
+                    bg: '#FFFFFF',
+                    bg_2: '#ebebeb',
+                    rev: '#222222',
+                    text: '#333333',
+                };
+                
+            </script>
+            <form class="theme-form" id="theme">
+                <label for="theme-dark" title="Темна тема">
+                    <div class="theme-icon theme-element"></div>
+                    <input class="theme-input" id="theme-dark" type="radio" name="theme" value="dark">
+                </label>
+            </form>
+        </div>
         <button class="header__burger burger">
             <span></span>
             <span></span>
@@ -103,26 +150,59 @@
 </header>
 
 <section class="vacansy section-padding">
-    <div class="vacansy__container container">
-        <div class="vacansy__content wow animate__fadeInLeft">
-            <h2 class="vacansy__title section-title _decor-title">
-                Робота зварника в польщі
-            </h2>
-            <p class="vacansy__text">
-                Значимость этих проблем настолько очевидна, что новая модель 
-                организационной деятельности играет важную роль в формировании системы 
-                обучения кадров, соответствует насущным потребностям. С другой стороны 
-                сложившаяся структура организации представляет собой интересный 
-                эксперимент проверки систем массового участия. 
-            </p>
+    <div class="vacansy__container container wow">
+        <div class="vacansy__content">
+            <div class="vacansy__content--header">
+                <div class="vacansy__content--header-block">
+                    <h2 class="vacansy__title section-title _decor-title">
+                        Робота зварника в польщі
+                    </h2>
+                    <ul class="vacansy__main-info">
+                        <li class="vacansy__main-info--li">
+                            <h3 class="vacansy__main-info--li-title min-title _light-color">
+                                Місце роботи
+                            </h3>
+                            <p class="vacansy__main-info--li-content">
+                                Польща, Grudziądz (Грудзьондз)
+                            </p>
+                        </li>
+                        <li class="vacansy__main-info--li">
+                            <h3 class="vacansy__main-info--li-title min-title _light-color">
+                                ЗАРПЛАТА
+                            </h3>
+                            <p class="vacansy__main-info--li-content">
+                                ставка за годину - 14 злотих нетто; для тих, хто виконує норму - 15 злотих нетто. В місяць винагорода складає 3080 - 3750 злотих нетто.
+                            </p>
+                        </li>
+                        <li class="vacansy__main-info--li">
+                            <h3 class="vacansy__main-info--li-title min-title _light-color">
+                                Проживання
+                            </h3>
+                            <p class="vacansy__main-info--li-content">
+                                Про житло: проживання надається у квартирі, в кімнаті по 3-4 особи. Є всі необхідні зручності, Інтернет. Вартість - 410 зл / м. До місця роботи проїзд на автобусі, роботодавець компенсує повну вартість проїзного квитка.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vacansy__content--header-block vacansy__content--header-block-image">
+                    <div class="vacansy__image">
+                        <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="vacansy__image--img">
+                    </div>
+                </div>
+            </div>
+            <h3 class="vacansy__info--title article-title _decor-article-title">
+                Інформація про Вакансію
+            </h3>
+
             <ul class="vacansy__info">
                 <li class="vacansy__param">
-                    <span class="vacancies-paragraph">Місце роботи</span>
-                    Польща
-                </li>
-                <li class="vacansy__param">
-                    <span class="vacancies-paragraph">Зарплата</span>
-                    10$/год
+                    <p class="vacansy__text accent-text">
+                        Значимость этих проблем настолько очевидна, что новая модель 
+                        организационной деятельности играет важную роль в формировании системы 
+                        обучения кадров, соответствует насущным потребностям. С другой стороны 
+                        сложившаяся структура организации представляет собой интересный 
+                        эксперимент проверки систем массового участия. 
+                    </p>
                 </li>
                 <li class="vacansy__param">
                     <span class="vacancies-paragraph">Вид договору</span>
@@ -131,10 +211,6 @@
                 <li class="vacansy__param">
                     <span class="vacancies-paragraph">Графік роботи</span>
                     5 днів на тиждень по 10-12 годин на день, іноді робота по суботах. В середньому 240-260 годин на місяць
-                </li>
-                <li class="vacansy__param">
-                    <span class="vacancies-paragraph">Проживання</span>
-                    350 зл / міс вираховуються з зарплати, по 2-4 людини в кімнаті, хороші умови проживання
                 </li>
                 <li class="vacansy__param">
                     <span class="vacancies-paragraph">Вимоги</span>
@@ -176,6 +252,25 @@
                     </ul>
                 </li>
             </ul>
+            <article class="vacansy-gallery-block">
+                <h3 class="vacansy__info--title article-title _decor-article-title">
+                    Фотогалерея
+                </h3>
+                <div class="vacansy__gallery popup-gallery">
+                    <a class="vacansy__gallery--item" href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">
+                        <span class="vacansy__gallery--item-icon"></span>
+                        <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" loading="lazy">
+                    </a>
+                    <a class="vacansy__gallery--item" href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">
+                        <span class="vacansy__gallery--item-icon"></span>
+                        <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" loading="lazy">
+                    </a>
+                    <a class="vacansy__gallery--item" href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner">
+                        <span class="vacansy__gallery--item-icon"></span>
+                        <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" loading="lazy">
+                    </a>
+                </div>
+            </article>
             <h3 class="vacansy-contact__title">
                 Для швидкого вирішення питання з працевлаштування звертайтесь за номером:
             </h3>
@@ -188,10 +283,7 @@
                 </li>
             </ul>
         </div>
-        <div class="vacansy__image wow animate__fadeInRight">
-            <img src="upload/last-vacancies/item.jpg" loading="lazy" alt="" class="vacansy__image--img">
-            <img src="images/vacansy/bg-vacansy-image.svg" loading="lazy" alt="" class="vacansy__image--img-bg">
-        </div>
+        
     </div>
 </section>
 
@@ -237,6 +329,16 @@
                                 +38 (055) 555 55 55
                             </a>
                         </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380555555555" class="footer__nav-contacts-tel nav-contacts-tel">
+                                +38 (055) 555 55 55
+                            </a>
+                        </li>
                     </ul>
                     <a href="#" class="footer__nav-social-link nav-social-link">
                         <img src="upload/social/viber-ico.svg" alt="Viber" class="nav-social-link-icon" title="Приєднуйтесь до нашої групи у Viber">
@@ -247,7 +349,8 @@
     </div>
 </footer>
 </div>
-
+<script src="js/dinapt-jquery-min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>
