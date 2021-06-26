@@ -1,6 +1,7 @@
 @@include("_header.html")
 
 <section class="list-vacancies section-padding">
+    <button class="filter-btn-toggle-fixed"><span class="filter-btn-toggle-fixed-icon"></span></button>
     <div class="filter-match">
         <div class="filter-match-found">
             Знайдено <span class="filter-match-value">12</span> вакансій
@@ -20,24 +21,21 @@
             <p>
                 Ми пропонуємо Вам безкоштовні актуальні вакансії по різним спеціальностям. Перевірені і надійні роботодавці, страхування та візова підтримка.
             </p>
-            <div class="list-vacancies__auto-loading">
-                <label>
-                    <input class="check-box" type="checkbox">
-                    <span class="check-style"></span>
-                        Автоматичне Завантаження Вакансій
-                </label>
-            </div>
         </div>
+        <div class="list-vacancies__filter-result filter-result"></div>
+        <button type="reset" class="filter-btn-reset list-vacancies__filter-btn-reset">
+            Очистити фільтр
+        </button>
         <button class="list-vacancies__filter-btn-toggle btn _not-hover">
             Фільтр
         </button>
         <button class="filter-close-btn"></button>
         <article class="list-vacancies__filter filter">
             <div class="filter-wrapper wow">
-            <h2 class="filter-title min-title _decor-title-min ">
+            <h2 class="filter-title min-title _decor-title-min">
                 Фільтр
             </h2>
-            <div class="list-vacancies__filter-result filter-result"></div>
+            
             <form class="filter-form" action="" name="category-filter" id="category-filter">
                 <button type="reset" class="filter-btn-reset">
                     Очистити фільтр
@@ -532,9 +530,13 @@
         </ul>
         
         <div class="list-vacancies__loader">
-            <button href="#" class="list-vacancies__switch link" data-loader-disable="Вимкнути автоматичне завантаження" data-loader-enable="Увімкнути автоматичне завантаження">
-                
-            </button>
+            <label class="check-switcher">
+                <div class="list-vacancies__switch">
+                    Автоматичне завантаження
+                    <input type="checkbox" class="check-box-switcher">
+                    <span class="check-switcher-decor"></span>
+                </div>
+            </label>
             <a href="#" class="list-vacancies__btn btn wow animate__fadeInUp">
                 Завантажити ще
             </a>

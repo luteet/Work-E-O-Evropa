@@ -1,7 +1,7 @@
 
 body {
     font-family: "Roboto";
-    @include adaptiv-font(16, 14);
+    @include adaptiv-font(16, 15);
     font-weight: 400;
     line-height: 165%;
     //color: #333;
@@ -141,8 +141,6 @@ section {
     text-transform: capitalize;
     border-radius: 15px;
     position: relative;
-    
-    //background: $gradientAccent;
     background: transparent;
     color: $white;
     font-weight: 500;
@@ -156,7 +154,10 @@ section {
     @include _maxWidth {
         font-size: 21px;
     }
-    
+    &.loading {
+        transition: all 0s ease-in-out;
+        box-shadow: none;
+    }
     &::before, &::after {
         content: '';
         position: absolute;
@@ -167,11 +168,14 @@ section {
 
         width: 150%; padding-top: 125%;
 
-        background: $gradientAccent;
+        background: $gradientAccentBtn;
 
         z-index: -1;
 
         transition: all 0.5s ease-in-out;
+    }
+    &.loading::before {
+        transition: all 0s ease-in-out;
     }
     &::after {
         left: 0; top: 0;
@@ -184,6 +188,15 @@ section {
     }
     
     &:hover {
+        &.loading {
+            @include _992 {
+                transform: translate(0, 0%);
+                box-shadow: none;
+                &::before {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+            }
+        }
         @include _992 {
             transform: translate(0, -10%);
             box-shadow: $shadowHover;
@@ -244,3 +257,97 @@ section {
 .slick-track {
     min-width: 100%;
 }
+
+
+
+.check-switcher {
+    cursor: pointer;
+
+    user-select: none;
+
+    position: relative;
+    /* &.active {
+        &-decor::before {
+            width: 100%;
+        }
+        & input {
+            left: 103%;
+            transform: translate(-200%, 0);
+        }
+    } */
+    &-decor {
+        display: inline-block;
+
+        position: relative;
+        width: 50px; height: 25px;
+
+        background: var(--scroll);
+        //background: #000;
+
+        border-radius: 1em;
+
+        margin: 0 0 0 15px;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            cursor: pointer;
+        }
+        &::before {
+            left: 0; top: 0;
+            width: 25px; height: 100%;
+    
+            background: $gradientAccent;
+    
+            border-radius: 1em;
+    
+            transition: all .2s ease-in-out;
+        }
+        &::after {
+            top: -1px; left: -1px;
+
+            width: 27px; height: 27px;
+
+            background: #5b619e;
+            box-shadow: $shadowAccent;
+
+            border-radius: 50%;
+
+            z-index: 2;
+
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            //opacity: 0;
+        }
+    }
+    
+
+    & input {
+        position: absolute;
+        right: 0; top: 6px;
+        transform: translate(-37px,0);
+
+        transition: all .2s ease-in-out;
+
+        z-index: -1;
+
+        opacity: 0;
+        
+        &:checked {
+            transform: translate(-100%,0);
+            & + .check-switcher-decor {
+                &::before {
+                    width: 100%;
+                }
+                &::after {
+                    left: 100%;
+                    transform: translate(-100%, 0);
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+

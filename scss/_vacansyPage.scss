@@ -23,6 +23,9 @@
             }
         }
     }
+    &__param li:last-child {
+        margin-bottom: 0;
+    }
     &__container {
         opacity: 0;
         display: flex;
@@ -73,12 +76,17 @@
         flex: 0 1 100%;
         position: relative;
         z-index: 2;
+        @include _maxWidth {
+            margin: 0 0 70px 0;
+        }
         &--header {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column-reverse;
-            margin: 0px 0px 50px 0;
+            @include _769 {
+                margin: 0px 0px 50px 0;
+            }
             @include _992 {
                 flex-direction: row;
                 justify-content: space-between;
@@ -128,6 +136,7 @@
                 background: $gradientAccent;
                 padding: 10px;
                 border-radius: 10px;
+                white-space: nowrap;
             }
             &-content {
                 padding: 15px 15px;
@@ -145,10 +154,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0 -5px 50px -5px;
+        max-width: 1140px;
+        margin: 0px auto 50px auto;
+        padding: 30px 0 30px 0;
+        border-radius: 0 0 25px 25px;
+        background-color: var(--bg_2);
+
         @media(min-width: 400px) {
             justify-content: stretch;
-            margin: 0 -15px 50px -15px;
         }
         &--item {
             flex: 0 1 calc(50% - 20px);
@@ -216,17 +229,35 @@
     &__title {
         margin: 75px 0 25px 0;
         
+        
         @include _992 {
-            margin: 0 0 50px 0;
-
+            margin: 0 0 75px 0;
+            //padding-bottom: 50px !important;
         }
     }
     &__text {
         line-height: 175%;
     }
     &__info {
+    
+        max-width: 1140px;
+        padding: 40px 15px 30px 15px;
+        border-radius: 0 0 25px 25px;
+        margin: 0 auto;
+        background-color: var(--bg_2);
+
+        & li:last-child {
+            margin-bottom: 0;
+        }
+
         &--title {
-            margin: 15px 0 30px 0;
+            
+            background-color: var(--bg_2);
+            margin: 30px auto 0 auto;
+            max-width: 1140px;
+            border-radius: 25px 25px 0 0;
+            padding: 30px 0;
+
             color: var(--text);
         }
         & > li {
@@ -245,13 +276,16 @@
         }
     }
     &-contact {
+        
         &__title {
-            margin: 15px 0;
+            text-align: center;
+            margin: 60px 0 15px 0;
             font-weight: 700;
             color: var(--text);
         }
         &__list {
             font-weight: 700;
+            text-align: center;
             & li {
                 margin: 15px 0;
                 color: var(--text);
