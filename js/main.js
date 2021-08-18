@@ -587,7 +587,7 @@ $(function () {
         function btnToTop() {
             if (scrolled < 150) {
                 $('.btn-to-top').addClass('hide');
-            }
+            } else $('.btn-to-top').removeClass('hide');
         }
         btnToTop();
         let toggleFixedCheck = $('.filter-btn-toggle-fixed').length;
@@ -641,7 +641,7 @@ $(function () {
                 // hide elem
                 $(header).addClass(settings.classToHide);
                 
-                $('.btn-to-top').addClass(settings.classToHide);
+                //$('.btn-to-top').addClass(settings.classToHide);
                 
                 if(toggleFixedCheck) $('.filter-btn-toggle-fixed').addClass(settings.classToHide);
                 
@@ -651,7 +651,7 @@ $(function () {
             if (scrollTop >= scrolled && scrollTopCheck == false) {
                 // show elem
                 $(header).removeClass(settings.classToHide);
-                $('.btn-to-top').removeClass(settings.classToHide);
+                //$('.btn-to-top').removeClass(settings.classToHide);
                 if(toggleFixedCheck) $('.filter-btn-toggle-fixed').removeClass(settings.classToHide);
                 //$('.filter').css('transform', `translate(0px, ${headerHeight}px)`);
                 scrollTopCheck = true;
@@ -701,9 +701,11 @@ $(function () {
         if($(e.target).hasClass('filter-result--item-btn')) {
             let value = $(e.target).parent().data('value'), name = $(e.target).parent().data('name');
             $(e.target).parent().fadeOut(200)
+            
             setTimeout(function() {
                 $(e.target).parent().remove();
                 lengthItemsInfo();
+                $('.filter-form').submit();
             },300);
             $(`[value="${value}"]`).prop({checked: false}).parent('.label-have-sub').removeClass('active').parent('.sub-li').removeClass('active').find('.filter-block__sub-list').css('display', 'none').next('.filter-more-list-toggle').addClass('_hidden');
             $(`[name="${name}"][value="all"]`).prop({checked: true});

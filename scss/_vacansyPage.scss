@@ -109,12 +109,39 @@
             }
         }
     }
+    &__tags {
+        //margin: 50px 0 0 0;
+        display: flex;
+        justify-content: center;
+        
+        @include _769 {
+            margin: 0 0 20px 0;
+        }
+        &--list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        & li + li {
+            &::before {
+                content: '/';
+                
+                color: cornflowerblue;
+            }
+        }
+        &--link {
+            display: inline-block;
+
+            padding: 5px 10px;
+        }
+        
+    }
     &__main-info {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
-        margin: 30px 0px 50px 0;
+        margin: 0px 0px 50px 0;
         @include _769 {
             flex-direction: row;
             margin: 0px -10px;
@@ -231,7 +258,7 @@
         
         
         @include _992 {
-            margin: 0 0 75px 0;
+            margin: 0 0 15px 0;
             //padding-bottom: 50px !important;
         }
     }
